@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var scope="global";
+    function checkscope(){
+        var scope="local";
+        return scope;
+    }
+    document.write(checkscope());
+</script>
+<script>
+   var num=25;
+    var str="您好";
+    var bol=true;
+    var nmd;
+    var result="";
+    result=num+str;
+    console.log('结果为'+result,'类型为'+typeof(result));
+   result=str+bol;
+   console.log('结果为'+result,'类型为'+typeof(result));
+    result=str+nmd;
+   console.log('结果为'+result,'类型为'+typeof(result));
+    result=num+bol;
+   console.log('结果为'+result,'类型为'+typeof(result));
+    result=num+nmd;
+   console.log('结果为'+result,'类型为'+typeof(result));
+    var numb=46;
+    console.log(isNaN(numb));
+    var b="25";
+    console.log(isNaN(b));
+    var b="25a";
+    console.log(isNaN(b));
+</script>
+<script>
+  // test parseInt();
+  var str="25";
+  var result=parseInt(str);
+    console.log(result);
+    console.log(typeof(result));
+    var str='78.23';
+    console.log(parseInt(str));
+    var str='123.456';
+    var result=parseFloat(str);
+    console.log(result);
+    console.log(typeof(result));
+</script>
+</body>
+</html>
