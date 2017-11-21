@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+</head>
+<body>
+<script>
+    var num=prompt('please input a char');
+    if(num>='0' && num<='9'){
+        console.log('this is a number');
+    }
+    else if((num>='a'&& num<='z')||(num>='A' && num<='Z')){
+         console.log('this is a english char');
+
+    }
+    else if(num>='\u4e00'&& num<='\u9fa5'){
+        console.log('this is a chinese');
+
+    }
+    else{
+        console.log('undefine');
+    }
+</script>
+</body>
+</html>
