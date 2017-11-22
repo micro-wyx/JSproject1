@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+</head>
+<body>
+<button onclick="show()" id="btn">按钮</button>
+<br>
+<button onclick="change()">交换数据</button>
+<script>
+    function show() {
+        var msg=prompt('please input your name');
+        alert(msg);
+    }
+    var bttn=document.getElementById('btn');
+    bttn.style.cssText='width:100px;height:50px;background-color:pink';
+</script>
+<script>
+    var a=prompt('please input a ');
+    var b=prompt('please input b');
+    function change(){
+        var c=a;
+        a=b;
+        b=c;
+        alert('a:'+a+'b:'+b);
+
+    }
+</script>
+</body>
+</html>
