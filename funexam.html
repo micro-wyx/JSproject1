@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+</head>
+<body>
+<button onclick="setsum()">两个数求和</button>
+<button onclick="getsetm()">三个数求最大值</button>
+<script>
+    function sum(n1,n2) {
+        var sum=n1+n2;
+        return sum;
+    }
+    function setm(m1,m2,m3) {
+     var m1=Number(m1);
+        var m2=Number(m2);
+        var m3=Number(m3);
+        var max;
+       if(m1>m2){
+           max=m1;
+       }
+       else{
+           max=m2;
+       }
+       if(max>m3){
+           return max;
+       }
+       else{
+           max=m3;
+           return max;
+       }
+
+    }
+   function setsum() {
+       var result=sum(12,13);
+      alert(result);
+   }
+   function getsetm() {
+       var maxresult=setm(10,15,30)
+       alert(maxresult);
+   }
+</script>
+</body>
+</html>
