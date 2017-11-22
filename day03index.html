@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>三目运算符</title>
+</head>
+<body>
+<script>
+/  var a=5;
+  var b=10;
+  a+=9;
+ b+=10;
+  console.log(a);
+  console.log(b);
+  var age=prompt('请输入您的年纪');
+  var result=age>=18?"允许考驾照":"年龄不到不允许";
+    //条件表达式嵌套
+   var score=prompt('请输入考试成绩');
+  var res=score>=80?'成绩优秀':(score>=60?'合格':'不及格');
+  console.log(res);
+</script>
+<script>
+   var money=prompt('请输入工资');
+   var result=money>=20000?'高工资':(money>=8000 && money<20000?'中等工资':'普通工资');
+ console.log(result);
+</script>
+<script>
+    var k=prompt('请输入您的体重：单位是kg');
+    var h=prompt('请输入您的身高：单位是m');
+    var m=k/(h*h);
+    var rem=m>=25?'偏胖':(m>=20 && m<25?'正常':'偏瘦');
+    alert('克莱克指数：'+rem);
+</script>
+</body>
+</html>
