@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="testchange()"> test</button>
+<button onclick="charge()">找零</button>
+<script>
+    function change(num1,num2) {
+        num1=100;
+        num2=200;
+        
+    }
+    function testchange() {
+        var num1=10;
+        var num2=20;
+        console.log(num1,num2);
+        change(num1,num2);
+        console.log(num1,num2);
+    }
+    function testfunction(){
+        console.log('全局函数');
+        function innerfunction() {
+
+           console.log('局部函数')   }
+        innerfunction();
+    }
+
+</script>
+<script>
+    function charge(){
+        var money;
+        var total;
+        var change;
+        var price=prompt('请输入商品价格');
+        var count=prompt('请输入购买数量');
+        total=price*count;
+        if(total>=500){
+            total=total*0.8;
+        }
+        console.log("您共消费"+total);
+        money=prompt("请刷卡");
+        if(money>=total) {
+            change = money - total;
+            console.log('找零' + change + '元');
+        }
+        else{
+            console.log('钱不够，错误');
+        }
+    }
+</script>
+</body>
+</html>
