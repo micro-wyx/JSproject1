@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>电话银行系统</title>
+</head>
+<body>
+<button onclick="blank()">电话银行</button>
+<button onclick="callDate()">日期计算器</button>
+<script>
+    function left(){
+        alert('余额查询中');
+    }
+    function get() {
+        alert('取款进行中');
+
+    }
+    function zhuangzhang() {
+        alert('转账进行中');
+
+    }
+    function quit() {
+        alert('退出系统，谢谢使用');
+
+    }
+    function maintain() {
+        alert('系统维护中');
+
+    }
+    function usererror() {
+        alert('您的输入有误');
+    }
+    function blank(num) {
+       var num=prompt('欢迎进入电话银行查询系统，请输入以下信息:\n输入1：查询余额\n2:取款\n3:转账\n0:退出系统');
+        num=parseInt(num);
+        switch (num){
+            case 1:left();
+                break;
+            case 2:get();
+                break;
+            case 3:zhuangzhang();
+                break;
+            case 0:quit();
+                break;
+            default:usererror();
+        }
+        
+    }
+    function callDate() {
+        var year=Number(prompt('year'));
+        var month=Number(prompt('month'));
+        var day=Number(prompt('day'));
+        var totalDays=0;
+        switch (month-1){
+            case 11:
+            totalDays+=30;
+            case 10:
+                totalDays+=31;
+            case 9:
+                totalDays+=30;
+            case 8:
+                totalDays+=31;
+            case 7:
+                totalDays+=31;
+            case 6:
+                totalDays+=30;
+            case 5:
+                totalDays+=31;
+            case 4:
+                totalDays+=30;
+            case 3:
+                totalDays+=31;
+            case 2:
+                totalDays+=28;
+                if(year%4==0&&year%100==1||year%400==0){
+                    totalDays+=1;
+                }
+            case 1:
+                totalDays+=31;
+        }
+        totalDays+=day;
+        console.log(totalDays);
+
+    }
+</script>
+</body>
+</html>
