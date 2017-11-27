@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>猜数字游戏</title>
+</head>
+<body>
+<button onclick="guess()">猜数字游戏</button>
+<button onclick="printmsg()">录入数据</button>
+<script>
+    function guess() {
+        var r= Math.random()*10;
+        r=parseInt(r);
+
+        while(true){
+            var input=prompt('请输入0到9的数字');
+         if(input=='exit'){
+                break;
+            }
+            if(input<r){
+                alert('您猜小啦');
+
+            }
+            else if(input>r){
+                alert('您猜大啦');
+
+            }
+            else{
+                alert('恭喜您，猜对啦');
+                break;
+            }
+        }
+
+    }
+    function printmsg() {
+        do{
+            var msg=prompt('please input message');
+            if(msg=='exit'){
+                break;
+            }
+            else {
+                console.log(msg);
+            }
+        }
+        while (msg!='exit')
+
+    }
+</script>
+</body>
+</html>
