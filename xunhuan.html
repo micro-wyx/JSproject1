@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>循环结构</title>
+</head>
+<body>
+<button onclick="pritnHello()">您好！世界</button>
+<button onclick="printNumber()">打印数字</button>
+<button onclick="sum()">数字求和</button>
+<button onclick="sumodd()">奇数求和</button>
+<script>
+function pritnHello() {
+    var i=1;
+    while(i<=100){
+        console.log('第'+i+'hello world');
+        i++;
+    }
+
+}
+function printNumber() {
+    var i=1;
+    while(i<=1000){
+        console.log(i);
+        i++;
+    }
+
+
+}
+function sum() {
+    var i=1;
+    var sum=0;
+    while(i<=1000){
+    sum=sum+i;
+        i++;
+    }
+    console.log(sum);
+}
+function sumodd() {
+    var i=1;
+    var oddsum=0
+    while(i<=1000){
+        if(i%2==1){oddsum=oddsum+i;}
+        i++;
+    }
+   console.log(oddsum);
+}
+function sum0dd_2() {
+    var i=0;
+    var sum=0;
+    while (i<1000){
+        sum+=i;
+        i=i+2;
+    }
+
+
+}
+</script>
+</body>
+</html>
