@@ -7,6 +7,7 @@
 <body>
 <button onclick="guess()">猜数字游戏</button>
 <button onclick="printmsg()">录入数据</button>
+<button onclick="monekey_peach()">猴子吃桃问题</button>
 <script>
     function guess() {
         var r= Math.random()*10;
@@ -44,6 +45,15 @@
         }
         while (msg!='exit')
 
+    }
+    function monekey_peach() {
+        var i=10;
+        var j=1;//total
+        while(i>1){
+            j=(j+1)*2;
+            i--
+        }
+        console.log(j);
     }
 </script>
 </body>
