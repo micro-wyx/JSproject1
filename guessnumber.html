@@ -8,6 +8,9 @@
 <button onclick="guess()">猜数字游戏</button>
 <button onclick="printmsg()">录入数据</button>
 <button onclick="monekey_peach()">猴子吃桃问题</button>
+<button onclick="printnum()">打印数字</button>
+<button onclick="odd_number()">打印奇数</button>
+<button onclick="even_sum()">偶数求和</button>
 <script>
     function guess() {
         var r= Math.random()*10;
@@ -54,6 +57,33 @@
             i--
         }
         console.log(j);
+    }
+    function printnum() {
+
+        for( var i=1;i<=100;i++){
+            console.log(i);
+        }
+
+    }
+</script>
+<script>
+    function odd_number() {
+        for(var i=1;i<=1000;i++){
+          if(i%2==1){
+              console.log(i);
+          }
+        }
+
+    }
+    function even_sum() {
+        var sum=0;
+        for(var i=1;i<=1000;i++){
+            if(i%2==0){
+                sum=sum+i;
+            }
+
+        }
+        console.log(sum);
     }
 </script>
 </body>
