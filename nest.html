@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>循坏嵌套</title>
+</head>
+<body>
+<button onclick="print_star()">打印星星</button>
+<button onclick="star_print()">星星打印</button>
+<script>
+
+    function print_star() {
+        document.write('*'+'<br>');
+        var msg='';
+        for(i=0;i<=5;i++)
+        {
+            msg+='*';
+
+        }
+        document.write(msg+'<br>');
+
+        for(i=0;i<=5;i++){
+           var msg='';
+            for (j=0;j<=5;j++){
+                msg+='*';
+            }
+            document.write(msg+'<br>');
+        }
+
+    }
+</script>
+<script>
+    function star_print() {
+
+        for(var i=0;i<5;i++){
+            var msg=' ';//这个的位置问题
+            for(var j=0;j<i;j++){
+                msg+='*';
+            }
+            document.write(msg+'<br>');
+        }
+
+    }
+</script>
+</body>
+</html>
