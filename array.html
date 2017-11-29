@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+<script>
+    var arr=['1','2','3','a','b'];
+    console.dir(arr);
+    console.log(arr[6]);
+    arr[6]='d';
+    console.log(arr[6]);
+    console.log(arr[arr.length-1]);
+    arr[arr.length]='e';
+    console.dir(arr);
+   arr.length--;
+    console.dir(arr);
+ arr.length-=2;
+    console.dir(arr);
+</script>
+<script>
+    var card=10;
+    function pay(card) {
+        card-=3;
+        console.log(card);
+
+    }
+    pay(10);
+    console.log(card);
+</script>
+<script>
+    var week=['星期一','星期二','星期三','星期四','星期五','星期六','星期日'];
+    for(var i=0;i<week.length;i++){
+        console.log(week[i]);
+    }
+    console.log(String(week));
+    for(var i=0;i<week.length;i++){
+        week[i]='今天是'+week[i];
+        console.log(week[i]);
+    }
+</script>
+<script>
+    var arr=[];
+    arr['name']='成绩';
+    arr['math']=89;
+    arr['chs']=50;
+    arr['eng']=70;
+console.dir(arr);
+    console.log(arr['name']);
+    for (var key in arr){
+        console.log(key+':'+arr[key]);
+    }
+</script>
+</body>
+</html>
