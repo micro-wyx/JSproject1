@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>数组练习</title>
+</head>
+<body>
+<button onclick="get_max()">求取最大值</button>
+<button onclick="delete_element()">删除重复元素</button>
+<button onclick="delete_element2()">删除元素2</button>
+<!--<script>-->
+    <!--var i;-->
+    <!--var arr=[];-->
+    <!--while ((i=prompt('请输入姓名'))!='exit'){-->
+        <!--arr[arr.length]=i;-->
+    <!--}-->
+<!--console.log(String(arr));-->
+<!--</script>-->
+<script>
+    //查找数组中最大值
+    function get_max() {
+        var arr=[1,4,8,2]
+        var maxn=arr[0];
+        for(var i=1;i<arr.length;i++){
+         if(arr[i]>maxn){
+             maxn=arr[i];
+         }
+        }
+     console.log(maxn);
+    }
+    //删掉数组中重复的元素
+    function delete_element() {
+        var arr=[1,4,5,6,8,4,0,8,0];
+        var result=[];
+        for(var i=0;i<arr.length;i++){
+            for(var j=0;j<result.length;j++){
+             if(result[j]==arr[i]){
+                 break;
+             }
+            }
+            if(j==result.length){
+                result[result.length]=arr[i];
+            }
+        }
+        console.log(String(result));
+    }
+    function delete_element2() {
+        var result=[];
+        var hash=[];
+        var arr=[1,4,5,6,8,4,0,8,0];
+        for(var i=0;i<arr.length;i++){
+            if(hash[arr[i]]==undefined){
+                result[result.length]=arr[i];
+                hash[arr[i]]=true;
+            }
+        }
+   console.log(String(result));
+    }
+</script>
+</body>
+</html>
