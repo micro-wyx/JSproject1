@@ -42,5 +42,61 @@
     console.log(pid_copy)
     console.log(pid_copy==pid);
 </script>
+<!--删除元素-->
+<script>
+    var imgs=['img1','img2','img3','img4'];
+    var deletes=imgs.splice(0,2);
+    imgs=imgs.concat(deletes);
+    console.log(String(imgs));
+    var img2=['img1','img2','img3','img4','img5'];
+   // var delet=img2.splice(img2.length-2,2);
+    var delet=img2.splice(-2,2);
+    img2=delet.concat(img2);
+    console.log(String(img2));
+    //插入元素
+    var arr1=[1,2,3];
+    var arr2=[4,5,6];
+    arr1.splice(1,0,arr2 );
+    console.dir(arr1);
+    //替换元素
+    var arr3=[2,3,4,5,6];
+    var arr4=[9,8,7,6,6];
+    arr3.splice(1,2,arr4);
+    console.log(String(arr3));
+
+</script>
+<script>
+
+    function bubbleSort() {
+        for(var r=1;r<arr.length;r++){
+            for(i=0;i<arr.length-r;i++){
+                if(arr[i]>arr[i+1]){
+//                    arr[i]^=arr[i+1];
+//                    arr[i+1]^=arr[i];
+//                    arr[i]^=arr[i+1];
+                    arr[i]=[arr[i+1],arr[i+1]=arr[i]][0];
+                }
+            }
+        }
+
+    }
+    //var arr=[2,5,7,3,6,4,1];
+    var arr=['jack','rose','tom','scot','dom']
+    bubbleSort(arr);
+    console.log(String(arr));
+</script>
+<!--使用sort进行比较-->
+<script>
+    var arr1=[3,1,7,4,2,5,6];
+    var arr2=[3,12,23,123,2,1];
+    arr1.sort();
+    console.log(String(arr1));
+    arr2.sort();
+    console.log(String(arr2));
+    function cmp(a,b) {return a-b;
+    }
+    arr2.sort(cmp);
+    console.log(String(arr2));
+</script>
 </body>
 </html>
