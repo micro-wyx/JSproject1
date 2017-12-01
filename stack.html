@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栈和队列</title>
+</head>
+<body>
+<script>
+    function dec2bin(dec) {
+        var bin=[];
+        while(dec>0){
+           bin.push(dec%2);
+            dec=parseInt(dec/2);
+        }
+      bin.reverse();
+      return bin.join('');
+    }
+    var d=90;
+    console.log(d.toString(2),dec2bin(d));
+</script>
+<script>
+    //queue
+    var shen7p=5;
+    var queue=[];
+    for(var i=1;i<=5;i++){
+        queue.push('顾客'+i);
+    }
+    console.log(queue);
+    while(shen7p>0){
+        var first=queue.shift();
+        shen7p--;
+        console.log(first+'购买成功');
+        console.log(String(queue));
+    }
+</script>
+
+<script>
+    var arr=[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+    for(r=0;r<arr.length;r++){
+        for(c=0;c<arr[r].length;c++){
+        console.log(arr[r][c]);
+        }
+    }
+
+</script>
+<script>
+    var pid='130102198312262151';
+
+    var gender;
+   gender=(pid[pid.length-2])%2==1?'男':'女';
+    var birth=pid.slice(6,-5+1);
+    var age=2017-pid.slice(6,6+4);
+    console.log(gender,birth,age);
+
+</script>
+<script>
+    var code='e4DS';
+   var input;
+   if(input=prompt('输入验证码'+code).toLowerCase()!=code.toLowerCase()){
+        alert('验证码错误，请重新输入')
+    }
+    else {
+       alert('验证码正确');
+   }
+</script>
+</body>
+</html>
