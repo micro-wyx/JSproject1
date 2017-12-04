@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>字符API</title>
+</head>
+<body>
+<script>
+    var chars=[];
+    for(u=48;u<=57;u++){
+        chars.push(String.fromCharCode(u));
+    }
+    for(i=97;i<=122;i++){
+        chars.push(String.fromCharCode(i));
+    }
+    for(j=65;j<=90;j++){
+        chars.push(String.fromCharCode(j));
+
+    }
+
+    // 产生随机验证码
+    function getCode() {
+        var code=[];
+
+        for(i=0;i<4;i++){
+            var r=Math.floor(Math.random()*62);
+            code.push(chars[r]);
+
+      }
+      return code.join('');
+    }
+    var code=getCode();
+
+</script>
+</body>
+</html>
