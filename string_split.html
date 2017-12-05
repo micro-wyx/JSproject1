@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ulname">
+    <li>smith</li>
+    <li>jerry</li>
+    <li>tom</li>
+    <li>rose</li>
+    <li>eric</li>
+    <li>lucy</li>
+</ul>
+<script>
+    var mail='1932220774@qq.com';
+    var rail=mail.split(/@/);
+    var htl1=document.getElementById('ulname').innerHTML;
+    htl1=htl1.replace(/^\s*<li>|\<\/li>\s*$/g,'');
+    var name='<li>'+(htl1.split(/<\/li>\s*<li>/).sort().join('</li><li>'))+'</li>';
+    document.getElementById('ulname').innerHTML=name;
+debugger;
+</script>
+</body>
+</html>
